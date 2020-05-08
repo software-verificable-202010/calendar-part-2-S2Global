@@ -11,8 +11,8 @@
             <ColumnDefinition Width="*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="*"></RowDefinition>
-            <RowDefinition Height="6*"></RowDefinition>
+            <RowDefinition Height="2*"></RowDefinition>
+            <RowDefinition Height="9*"></RowDefinition>
         </Grid.RowDefinitions>
         <Rectangle Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="1" Fill="White"/>
         <TextBlock Text="Month Year" FontSize="20" Margin="20" VerticalAlignment="Center" x:Name="Title"></TextBlock>
@@ -62,6 +62,13 @@
                         <ColumnDefinition Width="2*"></ColumnDefinition>
                         <ColumnDefinition Width="2*"></ColumnDefinition>
                     </Grid.ColumnDefinitions>
+                    <TextBlock Text="11" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18"></TextBlock>
+                    <TextBlock Text="12" Grid.Row="0" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18"></TextBlock>
+                    <TextBlock Text="13" Grid.Row="0" Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18"></TextBlock>
+                    <TextBlock Text="14" Grid.Row="0" Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18"></TextBlock>
+                    <TextBlock Text="15" Grid.Row="0" Grid.Column="5" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18"></TextBlock>
+                    <TextBlock Text="16" Grid.Row="0" Grid.Column="6" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18"></TextBlock>
+                    <TextBlock Text="17" Grid.Row="0" Grid.Column="7" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18"></TextBlock>
                 </Grid>
                 <Grid ShowGridLines="True" Grid.Column="0" Grid.Row="2"  x:Name="WeekView">
                     <Grid.ColumnDefinitions>
@@ -100,34 +107,11 @@
                         <RowDefinition Height="*"></RowDefinition>
                         <RowDefinition Height="*"></RowDefinition>
                     </Grid.RowDefinitions>
-                    <TextBlock Text="00:00" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="12"></TextBlock>
-                    <TextBlock Text="01:00" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="12"></TextBlock>
-                    <TextBlock Text="02:00" Grid.Column="0" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="12"></TextBlock>
-                    <TextBlock Text="03:00" Grid.Column="0" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="12"></TextBlock>
-                    <TextBlock Text="04:00" Grid.Column="0" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="12"></TextBlock>
-                    <TextBlock Text="05:00" Grid.Column="0" Grid.Row="5" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="12"></TextBlock>
-                    <TextBlock Text="06:00" Grid.Column="0" Grid.Row="6" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="12"></TextBlock>
-                    <TextBlock Text="07:00" Grid.Column="0" Grid.Row="7" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="12"></TextBlock>
-                    <TextBlock Text="08:00" Grid.Column="0" Grid.Row="8" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="12"></TextBlock>
-                    <TextBlock Text="09:00" Grid.Column="0" Grid.Row="9" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="12"></TextBlock>
-                    <TextBlock Text="10:00" Grid.Column="0" Grid.Row="10" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="12"></TextBlock>
-                    <TextBlock Text="11:00" Grid.Column="0" Grid.Row="11" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="12"></TextBlock>
-                    <TextBlock Text="12:00" Grid.Column="0" Grid.Row="12" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="12"></TextBlock>
-                    <TextBlock Text="13:00" Grid.Column="0" Grid.Row="13" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="12"></TextBlock>
-                    <TextBlock Text="14:00" Grid.Column="0" Grid.Row="14" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="12"></TextBlock>
-                    <TextBlock Text="15:00" Grid.Column="0" Grid.Row="15" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="12"></TextBlock>
-                    <TextBlock Text="16:00" Grid.Column="0" Grid.Row="16" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="12"></TextBlock>
-                    <TextBlock Text="17:00" Grid.Column="0" Grid.Row="17" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="12"></TextBlock>
-                    <TextBlock Text="18:00" Grid.Column="0" Grid.Row="18" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="12"></TextBlock>
-                    <TextBlock Text="19:00" Grid.Column="0" Grid.Row="19" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="12"></TextBlock>
-                    <TextBlock Text="20:00" Grid.Column="0" Grid.Row="20" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="12"></TextBlock>
-                    <TextBlock Text="21:00" Grid.Column="0" Grid.Row="21" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="12"></TextBlock>
-                    <TextBlock Text="22:00" Grid.Column="0" Grid.Row="22" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="12"></TextBlock>
-                    <TextBlock Text="23:00" Grid.Column="0" Grid.Row="23" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="12"></TextBlock>
                 </Grid>
             </Grid>
         </ScrollViewer>
         <Button Content=">" HorizontalAlignment="Left" Margin="736,0,0,0" VerticalAlignment="Center" Height="30" Width="30" x:Name="nextWeek" Click="NextWeekClick"/>
         <Button Content="&lt;" HorizontalAlignment="Left" Margin="700,0,0,0" VerticalAlignment="Center" Height="30" Width="30" x:Name="previousWeek" Click="PreviousWeekClick"/>
+        <Button Content="Back" HorizontalAlignment="Left" Margin="600,0,0,0" VerticalAlignment="Center" Height="30" Width="60" x:Name="goToCalendar" Click="GoToCalendar"/>
     </Grid>
 </Window>

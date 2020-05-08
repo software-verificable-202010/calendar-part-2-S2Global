@@ -53,6 +53,13 @@ namespace CalendarApp
             UpdateCalendar();
         }
 
+        private void GoToWeek(object sender, RoutedEventArgs e)
+        {
+            var weekView = new WeekWindow();
+            weekView.Show();
+            this.Close();
+        }
+
         private void UpdateRectangle()
         {
             int weekendRowProperty = 0;

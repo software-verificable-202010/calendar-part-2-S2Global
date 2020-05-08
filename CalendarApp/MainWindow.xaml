@@ -16,7 +16,7 @@
             <RowDefinition Height="10*"></RowDefinition>
         </Grid.RowDefinitions>
         <Rectangle Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="7" Fill="White"/>
-        <TextBlock Text="Month Year" FontSize="30" Margin="20" VerticalAlignment="Center" x:Name="Title"></TextBlock>
+        <TextBlock Text="Month Year" FontSize="30" Margin="20,0,400,0" VerticalAlignment="Center" x:Name="Title"></TextBlock>
         <Grid ShowGridLines="True" Grid.Column="0" Grid.Row="1">
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"></RowDefinition>
@@ -58,6 +58,7 @@
                 <RowDefinition Height="*"></RowDefinition>
             </Grid.RowDefinitions>
         </Grid>
+        <Button Content="Week" HorizontalAlignment="Left" Margin="600,0,0,0" VerticalAlignment="Center" Height="30" Width="60" x:Name="goToWeek" Click="GoToWeek"/>
         <Button Content=">" HorizontalAlignment="Left" Margin="736,0,0,0" VerticalAlignment="Center" Height="30" Width="30" x:Name="nextMonth" Click="NextClick"/>
         <Button Content="&lt;" HorizontalAlignment="Left" Margin="700,0,0,0" VerticalAlignment="Center" Height="30" Width="30" x:Name="previousMonth" Click="PreviousClick"/>
     </Grid>

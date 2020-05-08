@@ -37,6 +37,7 @@ namespace CalendarApp
             DayNumbers.Children.Clear();
             UpdateTitle();
             UpdateDayNumbers();
+            UpdateTimes();
         }
 
         private void NextWeekClick(object sender, RoutedEventArgs e)
@@ -51,6 +52,13 @@ namespace CalendarApp
             UpdateWeekView();
         }
 
+        private void GoToCalendar(object sender, RoutedEventArgs e)
+        {
+            var calendarView = new MainWindow();
+            calendarView.Show();
+            this.Close();
+        }
+
         private void UpdateDayNumbers()
         {
             int sunday = 7;
@@ -63,18 +71,39 @@ namespace CalendarApp
             {
                 dayOfWeek = sunday;
             }
-            int start = 1;
-            for (int i = start; i < weekLength+1; i++)
+            int loopStart = 1;
+            for (int i = loopStart; i < weekLength+1; i++)
             {
                 int dayOfPosition = dayTracker.Day;
                 System.Diagnostics.Debug.WriteLine(dayOfPosition);
                 int rowPosition = 0;
                 TextBlock dayNumber = new TextBlock();
                 dayNumber.Text = dayOfPosition.ToString();
+                dayNumber.FontSize = 16;
                 dayNumber.SetValue(Grid.RowProperty, rowPosition);
                 dayNumber.SetValue(Grid.ColumnProperty, i);
+                dayNumber.SetValue(Grid.VerticalAlignmentProperty, VerticalAlignment.Center);
+                dayNumber.SetValue(Grid.HorizontalAlignmentProperty, HorizontalAlignment.Center);
                 DayNumbers.Children.Add(dayNumber);
                 dayTracker = dayTracker.AddDays(1); 
+            }
+        }
+
+        private void UpdateTimes()
+        {
+            int loopStart = 0;
+            int loopEnd = 23;
+            for (int i = loopStart; i < loopEnd + 1; i++)
+            {
+                int columnPosition = 0;
+                TextBlock time = new TextBlock();
+                time.Text = "" + i + ":00";
+                time.FontSize = 12;
+                time.SetValue(Grid.RowProperty, i);
+                time.SetValue(Grid.ColumnProperty, columnPosition);
+                time.SetValue(Grid.VerticalAlignmentProperty, VerticalAlignment.Center);
+                time.SetValue(Grid.HorizontalAlignmentProperty, HorizontalAlignment.Center);
+                WeekView.Children.Add(time);
             }
         }
 
